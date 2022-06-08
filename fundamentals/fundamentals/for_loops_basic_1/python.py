@@ -1,7 +1,7 @@
 # 1. Basic
 
 for i in range(151):
-    
+
     print(i)
 
 # 2. Multiples of Five
@@ -39,10 +39,10 @@ for g in range(2018,0,-4):
 # 6. flexible counter
 
 low_num = 2
-high_num = 31
+high_num = 30
 mult = 5
 
-for z in range(low_num,high_num):
+for z in range(low_num,high_num+1):
     if z % mult == 0:
         print(z)
 
