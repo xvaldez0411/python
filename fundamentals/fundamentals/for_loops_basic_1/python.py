@@ -1,6 +1,7 @@
 # 1. Basic
 
 for i in range(151):
+    
     print(i)
 
 # 2. Multiples of Five
