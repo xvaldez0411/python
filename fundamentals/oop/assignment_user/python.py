@@ -12,6 +12,7 @@ class User:
         self.is_rewards_member = True
         print(self.is_rewards_member)
         self.gold_card_points += 200
+        return self
 
     def membership(self):
         if self.gold_card_points >=200:
@@ -25,6 +26,7 @@ class User:
 
     def spend_points(self,amount):
         self.gold_card_points -= amount
+        return self
 
     def display_info(self):
         return f"First Name: {self.first_name}| Last Name: {self.last_name}| Email: {self.email}| Age: {self.age}| Points Balance: {self.gold_card_points}| {self.membership()}"
@@ -39,16 +41,21 @@ user_3 = User("Bob", "Bunyon", "bob@email.com", 27)
 # print(user_2.display_info())
 # print(user_3.display_info())
 # Add the enroll method to the User class, implement and test by calling the method on the user in the outer scope.
-user_1.enroll()
+# user_1.enroll()
 
-# Implement the spend_points(self, amount) method
-user_1.spend_points(50)
+# # Implement the spend_points(self, amount) method
+# user_1.spend_points(50)
 
-# Have the second user enroll.
-user_2.enroll()
+# # Have the second user enroll.
+# user_2.enroll()
 
-# Have the second user spend 80 points
-user_2.spend_points(80)
+# # Have the second user spend 80 points
+# user_2.spend_points(80)
+
+# CHAINING METHODS ADDITIONAL PRACTICE ASSIGNMENT
+
+user_1.enroll().spend_points(50).enroll()
+user_2.enroll().spend_points(80)
 
 # Call the display method on all the users.
 print(user_1.display_info())
