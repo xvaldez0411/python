@@ -50,8 +50,8 @@ players = [
 ]
 
 new_team = []
-for person in players:
-    new_team.append(Player(person))
+for player in players:
+    new_team.append(Player(player))
 
 for player in new_team:
     print(player.name)
