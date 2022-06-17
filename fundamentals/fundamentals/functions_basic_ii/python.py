@@ -49,7 +49,7 @@ print(values_greater_than_second([3]))
 
 def length_and_value(a,b):
     my_list = []
-    for i in range(0,a+1):
+    for i in range(0,a):
         my_list.append(b)
     return my_list
 
