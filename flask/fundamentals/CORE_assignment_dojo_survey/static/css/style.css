@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.fill_out {
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.submit {
+    display: flex;
+    align-items: flex-end;
+}
+
+.submit button {
+    position: relative;
+    left: 326px;
+}
+
+.submit button,
+.go_back button {
+    border-radius: 8px;
+    padding: 3px;
+    background-color: rgb(99, 99, 199);
+    color: white;
+    font-weight: bold;
+}
+
+.title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
