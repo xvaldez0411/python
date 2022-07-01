@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1,
+h3,
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.click a,
+.reset a {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+.click a {
+    background-color: rgb(76, 76, 252);
+}
+
+.reset a {
+    background-color: rgba(250, 69, 69, 0.993);
+}
+
+.click a:hover,
+.reset a:hover,
+.add_2 a:hover,
+.user_submit button:hover {
+    /* background-color: yellow;
+    color: black; */
+    box-shadow: 0px 0px 0px white;
+    font-weight: normal;
+}
+
+.add_2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.add_2 a {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+.user_name {
+    text-align: center;
+}
+
+input {
+    background-color: rgba(225, 225, 225, 0.809);
+    padding: 2px 8px;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.user_submit {
+    text-align: center;
+    position: relative;
+    left: 35px;
+    margin-top: 50px;
+}
+
+.user_submit button {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+}
