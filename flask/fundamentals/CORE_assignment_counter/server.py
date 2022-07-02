@@ -21,7 +21,7 @@ def twice():
 @app.route('/destroy_session')
 def reset():
     session.clear()
-    return redirect('/')
+    return redirect('/user')
 
 @app.route('/user',methods=['POST'])
 def user():
