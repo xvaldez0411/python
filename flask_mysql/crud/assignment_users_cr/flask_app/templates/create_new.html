@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbar">
+        <h1>Add a New User</h1>
+        <a href="/users">Home</a>
+    </div>
+    <form action="/users/new" method="POST">
+        <p>First Name</p>
+        <input type="text" name="first_name">
+        <p>Last Name</p>
+        <input type="text" name="last_name">
+        <p>Email</p>
+        <input type="email" name="email">
+        <button type="submit" >Create</button>
+    </form>
+    
+</body>
+</html>
