@@ -19,3 +19,30 @@ def create():
 def add_new():
     User.save(request.form)
     return redirect('/users')
+
+@app.route('/users/<int:id>')
+def show_user(id):
+    data = {
+        "id": id
+    }
+    return render_template('show_user.html', user=User.get_user(data))
+
+@app.route('/users/<int:id>/edit')
+def show_edit_form(id):
+    data = {
+        "id": id
+    }
+    return render_template("edit_user.html", user=User.get_user(data))
+
+@app.route('/users/<int:id>/update', methods=['POST'])
+def update_user(id):
+    User.update(request.form)
+    return redirect('/users')
+
+@app.route('/users/<int:id>/delete')
+def delete_user(id):
+    data = {
+    "id": id
+    }
+    User.delete(data)
+    return redirect('/users')
