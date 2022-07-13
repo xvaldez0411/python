@@ -37,7 +37,7 @@ def register():
         'first_name': request.form['first_name'],
         'last_name': request.form['last_name'],
         'email': request.form['email'],
-        # 'birthday': request.form['birthday'],
+        'birthday': request.form['birthday'],
         'password': pw_hash
     }
 
