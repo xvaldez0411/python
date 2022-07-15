@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Create Recipe</title>
+</head>
+<body>
+    <div class="top_bar">
+        <h1>Add a New Recipe!</h1>
+        <div class="a_links">
+            <a href="/dashboard">back to recipes</a>
+            <a href="/logout">logout</a>
+        </div>
+    </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+    <form action="/recipes/{{recipe.id}}/update" method="POST">
+        <input name="id" type="hidden" value="{{recipe.id}}">
+        <div class="left_column">
+            <p>Name <input name="name" type="text" value="{{recipe.name}}"></p>
+            <p>Description <textarea name="description" cols="50" rows="10">{{recipe.description}}</textarea></p>
+            <p>Instructions: <textarea name="instructions" cols="50" rows="10">{{recipe.instructions}}</textarea></p>
+        </div>
+        <div class="right_column">
+            <div class="calendar">
+                <p>Date Cooked/Made: <input name="date_made" type="date"></p>
+                <img src="{{ url_for('static', filename='img/calendar.png') }}" alt="calendar-icon" height="30px">
+            </div>
+            <p>Under 30 minutes?</p>
+            <label for="yes">Yes</label>
+            <input type="radio" name="cooking_time" value="Yes">
+            <label for="no">No</label>
+            <input type="radio" name="cooking_time" value="No">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
