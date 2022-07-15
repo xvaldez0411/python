@@ -14,14 +14,8 @@
 .left-column,
 .right-column {
     flex: 1;
-    /* background-color: rgba(192,192,192,0.6); */
     padding: 15px;
 }
-/* 
-input {
-    background-color: black;
-    color: white;
-} */
 
 .right-column {
     margin-left: 20px;
