@@ -87,5 +87,7 @@ class Recipe:
         if len(recipe['instructions']) < 3:
             flash('Instructions must be at least 3 characters', "error")
             is_valid = False
-
+        if "cooking_time" not in recipe:
+            flash('Must Select one')
+            is_valid = False
         return is_valid
