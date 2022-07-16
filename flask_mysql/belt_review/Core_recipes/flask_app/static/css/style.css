@@ -25,6 +25,11 @@ button {
     box-shadow: 3px 4px 5px black;
 }
 
+button:hover {
+    box-shadow: 0px 0px 0px white;
+    font-weight: normal;
+}
+
 .top_bar {
     display: flex;
     justify-content: space-between;
