@@ -24,6 +24,7 @@ class User:
     def save(cls,data):
         query = "INSERT INTO users(first_name, last_name, email) VALUES(%(first_name)s, %(last_name)s, %(email)s);"
         user_id = connectToMySQL(cls.db).query_db(query, data)
+        return user_id
 
     @classmethod
     def get_user(cls,data):
